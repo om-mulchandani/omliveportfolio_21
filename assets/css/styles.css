@@ -1,0 +1,409 @@
+/* ==========================================================================
+   OM MULCHANDANI — INTERDISCIPLINARY TECHNOLOGIST PORTFOLIO
+   Design System: Distinct Brutalism × Bloomberg Terminal Editorial
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;700;800&display=swap');
+
+:root {
+  --bg-primary: #090909;
+  --bg-secondary: #111111;
+  --bg-tertiary: #161616;
+  --bg-surface: #1a1a1a;
+
+  --text-primary: #F5F5F5;
+  --text-secondary: #B8B8B8;
+  --text-muted: #666666;
+  --text-dim: #444444;
+
+  --accent-purple: #8B5CF6;
+  --accent-purple-bright: #A970FF;
+  --accent-purple-dim: rgba(139, 92, 246, 0.15);
+  --accent-purple-glow: rgba(139, 92, 246, 0.35);
+
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-active: #8B5CF6;
+
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Syne', 'Space Grotesk', sans-serif;
+
+  --grid-line: rgba(255, 255, 255, 0.04);
+}
+
+/* Base resets & typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+  selection-background-color: var(--accent-purple);
+  selection-color: #000;
+}
+
+::selection {
+  background: var(--accent-purple);
+  color: #000000;
+}
+
+/* Custom Brutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-left: 1px solid var(--border-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-purple);
+}
+
+/* Monospace Utility Classes */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Technical Brutalist Grid Background */
+.bg-grid-tech {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+.bg-dot-matrix {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Brutalist Borders & Dividers */
+.border-b-rule {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.border-t-rule {
+  border-top: 1px solid var(--border-light);
+}
+
+.border-r-rule {
+  border-right: 1px solid var(--border-light);
+}
+
+.border-l-rule {
+  border-left: 1px solid var(--border-light);
+}
+
+.border-hard {
+  border: 1px solid var(--border-light);
+}
+
+.border-subtle {
+  border: 1px solid var(--border-subtle);
+}
+
+/* Interactive Brutalist Button */
+.btn-brutalist {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1.4rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-brutalist:hover {
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px var(--accent-purple);
+}
+
+.btn-brutalist-accent {
+  background: var(--accent-purple);
+  color: #000;
+  border-color: var(--accent-purple);
+  font-weight: 700;
+}
+
+.btn-brutalist-accent:hover {
+  background: var(--accent-purple-bright);
+  color: #000;
+  border-color: var(--accent-purple-bright);
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px #ffffff;
+}
+
+.btn-brutalist-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+}
+
+.btn-brutalist-outline:hover {
+  border-color: var(--accent-purple);
+  color: var(--accent-purple-bright);
+  background: rgba(139, 92, 246, 0.05);
+}
+
+/* Live Status Indicator Pulse */
+.status-beacon {
+  width: 8px;
+  height: 8px;
+  background-color: #10B981;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+}
+
+.status-beacon::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #10B981;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.status-beacon-purple {
+  background-color: var(--accent-purple);
+}
+
+.status-beacon-purple::after {
+  border-color: var(--accent-purple);
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+/* Technical Badge */
+.tech-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  border-color: var(--accent-purple);
+  color: var(--text-primary);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+.tech-tag-accent {
+  border-color: rgba(139, 92, 246, 0.4);
+  color: var(--accent-purple-bright);
+  background: rgba(139, 92, 246, 0.06);
+}
+
+/* Custom Precision Cursor */
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s, opacity 0.2s;
+  display: none;
+}
+
+@media (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-purple);
+  border-radius: 50%;
+}
+
+.cursor-ring {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  border-radius: 50%;
+  transition: transform 0.15s ease-out, border-color 0.2s;
+}
+
+.cursor-active .cursor-ring {
+  transform: translate(-50%, -50%) scale(1.6);
+  border-color: var(--accent-purple-bright);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+/* Editorial Brutalist Typography scale */
+.text-hero-giant {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 9.5vw, 9.8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.text-editorial-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 5.2rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.text-editorial-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.8vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Asymmetric Numbered Markers */
+.num-marker {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.num-marker-accent {
+  color: var(--accent-purple);
+}
+
+/* Interactive Project Visual Cards */
+.project-card {
+  transition: border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.project-card:hover {
+  border-color: var(--accent-purple);
+}
+
+.project-card:hover .project-accent-bar {
+  width: 100%;
+}
+
+.project-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent-purple);
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Lab Notebook Tab Styles */
+.lab-tab {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lab-tab.active {
+  background: var(--bg-surface);
+  border-left: 3px solid var(--accent-purple);
+  color: var(--text-primary);
+}
+
+/* Diagnostic Ticker Animation */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Command Palette Modal */
+.cmd-modal-backdrop {
+  background: rgba(9, 9, 9, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .text-hero-giant {
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+    line-height: 0.95;
+  }
+}

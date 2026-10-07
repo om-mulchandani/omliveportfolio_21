@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Mulchandani — Resume / Curriculum Vitae</title>
+  <meta name="description" content="Resume of Om Mulchandani — Interdisciplinary Technologist across Data Analytics, Bioinformatics, and AI.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Browser CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- HTML2PDF CDN for Direct 1-Click PDF File Export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <style>
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 6mm 10mm;
+      }
+      body {
+        background: white !important;
+        color: #111111 !important;
+        font-size: 8.5pt !important;
+        line-height: 1.25 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .resume-container, .resume-paper {
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-height: 0 !important;
+        height: auto !important;
+      }
+      header {
+        padding-bottom: 2mm !important;
+        margin-bottom: 2.5mm !important;
+      }
+      section {
+        margin-bottom: 2.5mm !important;
+      }
+      h1 {
+        font-size: 18pt !important;
+      }
+      h2 {
+        margin-bottom: 1mm !important;
+        font-size: 8pt !important;
+      }
+      p, li, .text-xs, .text-sm {
+        font-size: 8pt !important;
+        line-height: 1.2 !important;
+      }
+      .space-y-4 > * + * {
+        margin-top: 1.5mm !important;
+      }
+      .space-y-3\.5 > * + * {
+        margin-top: 1.5mm !important;
+      }
+      ul {
+        margin-top: 0.5mm !important;
+      }
+      li {
+        margin-bottom: 0.5mm !important;
+      }
+      footer {
+        display: none !important;
+      }
+      a {
+        color: #111111 !important;
+        text-decoration: none !important;
+      }
+    }
+
+    body {
+      background-color: #0d0d0d;
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .resume-paper {
+      background: #ffffff;
+      color: #18181b;
+      min-height: 297mm;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body class="py-6 px-4 antialiased min-h-screen flex flex-col items-center">
+
+  <!-- TOP ACTION BAR (Screen Only) -->
+  <div class="no-print w-full max-w-4xl mb-6 flex flex-wrap items-center justify-between gap-4 bg-[#161616] border border-zinc-800 p-4 font-mono text-xs text-zinc-300">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="px-3 py-1.5 bg-zinc-900 border border-zinc-700 hover:border-purple-500 hover:text-white transition-colors flex items-center gap-2">
+        <span>←</span>
+        <span>BACK TO PORTFOLIO</span>
+      </a>
+      <span class="text-zinc-600">|</span>
+      <span class="text-zinc-400">DOCUMENT: OM_MULCHANDANI_RESUME.PDF</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="resume/resume.pdf" download="Om_Mulchandani_Resume.pdf" id="download-pdf-btn" class="px-4 py-1.5 bg-purple-600 hover:bg-purple-500 text-black font-bold border border-purple-400 transition-colors cursor-pointer flex items-center gap-2 text-decoration-none">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+        <span>DOWNLOAD PDF</span>
+      </a>
+      <button onclick="window.print()" class="px-4 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-600 transition-colors cursor-pointer flex items-center gap-2">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+        <span>PRINT / SYSTEM PDF</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 PRINT-READY RESUME SHEET -->
+  <div id="resume-content" class="resume-paper resume-container w-full max-w-4xl p-10 sm:p-14 text-zinc-900 border border-zinc-300">
+    
+    <!-- HEADER SECTION -->
+    <header class="border-b-2 border-zinc-900 pb-6 mb-6">
+      <div class="flex flex-wrap items-start justify-between gap-4">
+        <div>
+          <h1 class="font-bold text-3xl sm:text-4xl text-zinc-950 tracking-tight">
+            OM MULCHANDANI
+          </h1>
+          <div class="text-base sm:text-lg font-semibold text-purple-800 mt-0.5 tracking-wide">
+            INTERDISCIPLINARY TECHNOLOGIST
+          </div>
+          <div class="font-mono text-xs text-zinc-600 uppercase tracking-wider mt-1">
+            DATA / BIOINFORMATICS / ARTIFICIAL INTELLIGENCE
+          </div>
+        </div>
+
+        <!-- Contact Box -->
+        <div class="font-mono text-xs text-zinc-700 space-y-1 text-left sm:text-right">
+          <div><strong class="text-zinc-900">Email:</strong> <a href="mailto:ommulchandani2108@gmail.com" class="text-purple-700 underline">ommulchandani2108@gmail.com</a></div>
+          <div><strong class="text-zinc-900">Location:</strong> Rajkot, Gujarat, India</div>
+          <div><strong class="text-zinc-900">Portfolio:</strong> <span class="text-zinc-800">om-mulchandani.tech</span></div>
+          <div><strong class="text-zinc-900">Focus:</strong> Systems, Data & Computational Biology</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROFESSIONAL SUMMARY -->
+    <section class="mb-6">
+      <h2 class="font-mono text-xs font-bold text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1 mb-2.5">
+        // PROFESSIONAL SUMMARY
+      </h2>
+      <p class="text-sm leading-relaxed text-zinc-800 text-justify">
+        Interdisciplinary technologist with 2+ years of practical foundation in data analytics, currently pursuing a B.Tech in Bioinformatics and actively developing intelligent computational systems. Passionate about exploring the space between disciplines — where biological inquiries become computational problems, raw telemetry becomes structured workflows, and AI models evolve into useful operational products. Relentlessly curious, systems-oriented, and comfortable executing across unfamiliar technological domains.
+      </p>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="mb-6">
+      <h2 class="font-mono text-xs font-bold text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1 mb-3">
+        // EXPERIENCE & APPLIED TRAJECTORY
+      </h2>
+
+      <div class="space-y-4 text-sm">
+        <!-- TOPS TECHNOLOGIES -->
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between">
+            <span class="font-bold text-zinc-950">TOPS TECHNOLOGIES PVT. LTD.</span>
+            <span class="font-mono text-xs text-zinc-600">Rajkot, India | Ongoing Training</span>
+          </div>
+          <div class="text-xs font-semibold text-purple-800 italic">Professional Data Analytics & BI Track</div>
+          <ul class="list-disc list-inside mt-1 text-xs text-zinc-800 space-y-1">
+            <li>Mastering end-to-end data pipelines: transforming unstructured transactional data into normalized relational databases.</li>
+            <li>Authoring advanced SQL queries utilizing window functions, subqueries, complex multi-table joins, and stored procedures.</li>
+            <li>Designing interactive business intelligence dashboards in Power BI and Excel, utilizing DAX measures and Power Query ETL steps.</li>
+            <li>Conducting statistical and exploratory data analysis (EDA) using Python (Pandas, NumPy, Matplotlib).</li>
+          </ul>
+        </div>
+
+        <!-- HELIX ANALYTICS -->
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between">
+            <span class="font-bold text-zinc-950">HELIX ANALYTICS</span>
+            <span class="font-mono text-xs text-zinc-500">2024 | Fictional / Demo Project Case</span>
+          </div>
+          <div class="text-xs font-semibold text-zinc-700 italic">Entry-Level Data Analyst</div>
+          <ul class="list-disc list-inside mt-1 text-xs text-zinc-800 space-y-1">
+            <li>Executed data cleaning and validation workflows on messy operational datasets to establish reproducible data hygiene.</li>
+            <li>Constructed analytical views and automated recurring executive reporting, reducing manual compile cycles by 60%.</li>
+            <li>Collaborated with team leads to define core metrics and translated business criteria into structured SQL queries and dashboards.</li>
+          </ul>
+        </div>
+
+        <!-- AXIOM LABS -->
+        <div>
+          <div class="flex flex-wrap items-baseline justify-between">
+            <span class="font-bold text-zinc-950">AXIOM LABS</span>
+            <span class="font-mono text-xs text-zinc-500">2025 | Fictional / Demo Project Case</span>
+          </div>
+          <div class="text-xs font-semibold text-purple-800 italic">AI Research Intern</div>
+          <ul class="list-disc list-inside mt-1 text-xs text-zinc-800 space-y-1">
+            <li>Engineered prototype Retrieval-Augmented Generation (RAG) pipelines for parsing, chunking, and querying scientific documents.</li>
+            <li>Experimented with dense vector embeddings, semantic search reranking, and multi-agent tool execution loops.</li>
+            <li>Prototyped automated knowledge extraction pipelines converting raw PDF research texts into structured JSON knowledge nodes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED PROJECTS -->
+    <section class="mb-6">
+      <h2 class="font-mono text-xs font-bold text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1 mb-3">
+        // SELECTED RESEARCH PROJECTS & EXPERIMENTS
+      </h2>
+
+      <div class="space-y-3.5 text-sm">
+        <div>
+          <div class="flex items-baseline justify-between">
+            <span class="font-bold text-zinc-950">GENOME X — Computational Biology Visualization System</span>
+            <span class="font-mono text-xs text-zinc-600">2026</span>
+          </div>
+          <div class="text-xs text-zinc-700 leading-relaxed mt-0.5">
+            An interactive web-based scientific tool for visualizing genomic loci, mutation maps (CFTR, TP53, BRCA1, APOE), and tissue-specific RNA-seq expression heatmaps. Implemented with dynamic coordinate SVG rendering and biological sequence analysis algorithms.
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-baseline justify-between">
+            <span class="font-bold text-zinc-950">ATLAS — AI Research Intelligence System</span>
+            <span class="font-mono text-xs text-zinc-600">2025</span>
+          </div>
+          <div class="text-xs text-zinc-700 leading-relaxed mt-0.5">
+            A semantic research engine that ingests technical research papers, constructs citation and concept graphs, and generates grounded extractive synthesis using high-dimensional vector embeddings and cross-encoder rerankers.
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-baseline justify-between">
+            <span class="font-bold text-zinc-950">PROJECT PULSE — AI × Bioinformatics Research Experiment</span>
+            <span class="font-mono text-xs text-zinc-600">2026</span>
+          </div>
+          <div class="text-xs text-zinc-700 leading-relaxed mt-0.5">
+            An exploratory computational framework investigating how modern AI algorithms detect non-linear patterns, entropy changes, and anomalous biomarker signatures across multimodal biological streaming data.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="mb-6">
+      <h2 class="font-mono text-xs font-bold text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1 mb-2.5">
+        // EDUCATION
+      </h2>
+      <div class="flex flex-wrap items-baseline justify-between text-sm">
+        <div>
+          <span class="font-bold text-zinc-950">BACHELOR OF TECHNOLOGY (B.TECH) IN BIOINFORMATICS</span>
+          <div class="text-xs text-purple-800">Undergraduate Degree Program | Ongoing</div>
+        </div>
+        <span class="font-mono text-xs text-zinc-600">Expected 2026/2027</span>
+      </div>
+      <div class="text-xs text-zinc-700 mt-1">
+        Core Coursework: Computational Biology, Molecular Genetics, Database Management Systems, Data Structures & Algorithms, Biostatistics, Genomic Sequence Analysis.
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS & DISCIPLINES -->
+    <section>
+      <h2 class="font-mono text-xs font-bold text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1 mb-2.5">
+        // TECHNICAL SKILLS & CAPABILITIES
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs text-zinc-800 font-mono">
+        <div>
+          <strong class="text-zinc-950 block mb-0.5 font-sans font-bold">DATA ANALYTICS:</strong>
+          Advanced Excel (Formulas, Pivot Tables, Lookups), SQL (PostgreSQL, MySQL), Power BI (DAX, Modeling), Data Cleaning, Pandas, NumPy, Exploratory Data Analysis (EDA).
+        </div>
+        <div>
+          <strong class="text-zinc-950 block mb-0.5 font-sans font-bold">COMPUTATION & CODE:</strong>
+          Python, Vanilla JavaScript (ES6+), RESTful APIs, ETL Pipelines, Process Automation, Linux/CLI, Git & Version Control.
+        </div>
+        <div class="mt-2">
+          <strong class="text-zinc-950 block mb-0.5 font-sans font-bold">ARTIFICIAL INTELLIGENCE:</strong>
+          LLM Prompt Engineering, Retrieval-Augmented Generation (RAG), Semantic Search, Vector Embeddings, AI Agents, Tool-Calling Architectures.
+        </div>
+        <div class="mt-2">
+          <strong class="text-zinc-950 block mb-0.5 font-sans font-bold">BIOINFORMATICS:</strong>
+          Computational Biology Algorithms, Genomic Sequence Analysis, Biological Database Querying (NCBI, Ensembl, ClinVar), Scientific Computing.
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER NOTE -->
+    <footer class="mt-8 pt-4 border-t border-zinc-200 text-[10px] font-mono text-zinc-500 flex justify-between">
+      <span>OM MULCHANDANI // CURRICULUM VITAE</span>
+      <span>RAJKOT, GUJARAT, INDIA</span>
+    </footer>
+
+  </div>
+
+  <!-- PDF FALLBACK SCRIPT -->
+  <script>
+    function generateClientPdf() {
+      const element = document.getElementById('resume-content');
+      const opt = {
+        margin:       [6, 10, 6, 10],
+        filename:     'Om_Mulchandani_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      if (typeof html2pdf !== 'undefined') {
+        html2pdf().set(opt).from(element).save();
+      } else {
+        window.print();
+      }
+    }
+  </script>
+</body>
+</html>

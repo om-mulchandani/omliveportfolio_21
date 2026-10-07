@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Mulchandani — Interdisciplinary Technologist</title>
+  <meta name="description" content="Portfolio of Om Mulchandani — working across data analytics, bioinformatics, artificial intelligence and computational systems. Training at Tops Technologies, Rajkot.">
+  <meta name="keywords" content="Om Mulchandani, Interdisciplinary Technologist, Bioinformatics, Data Analytics, Artificial Intelligence, Computational Biology, Rajkot, Tops Technologies">
+  <meta name="author" content="Om Mulchandani">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Om Mulchandani — Interdisciplinary Technologist">
+  <meta property="og:description" content="Working across data analytics, bioinformatics, artificial intelligence and computational systems.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Browser v4 -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- Custom Design System CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Additional inline refinements for Tailwind synergy */
+    .border-glow:hover {
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-[#090909] text-[#F5F5F5] antialiased selection:bg-[#8B5CF6] selection:text-black min-h-screen relative font-sans">
+
+  <!-- Custom Precision Cursor Element -->
+  <div id="custom-cursor" class="custom-cursor">
+    <div class="cursor-ring flex items-center justify-center">
+      <div class="cursor-dot"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOP TELEMETRY SYSTEM BAR (Bloomberg / Terminal aesthetic)
+       ========================================================================== -->
+  <header class="w-full bg-[#0c0c0c] border-b border-[#222222] text-[11px] font-mono text-[#888888] sticky top-0 z-40 select-none">
+    <div class="max-w-[1500px] mx-auto px-4 py-2 flex flex-wrap items-center justify-between gap-2">
+      <!-- Left: Node ID & Status -->
+      <div class="flex items-center gap-4">
+        <span class="flex items-center gap-2 text-zinc-300 font-medium">
+          <span class="status-beacon"></span>
+          <span>SYS.OM-01 // ONLINE</span>
+        </span>
+        <span class="hidden sm:inline-block text-zinc-600">|</span>
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-zinc-400">
+          <span class="text-zinc-500">NODE:</span>
+          <span>RAJKOT [22.3039° N, 70.8022° E]</span>
+        </span>
+        <span class="hidden md:inline-block text-zinc-600">|</span>
+        <span class="hidden md:inline-block text-[#8B5CF6] font-semibold">
+          MODE: EXPLORATION
+        </span>
+      </div>
+
+      <!-- Right: Clocks, Status & Command Trigger -->
+      <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
+          <span class="text-zinc-400" id="system-clock">--:--:-- IST</span>
+          <span class="text-zinc-600 hidden sm:inline">/</span>
+          <span class="text-zinc-500 hidden sm:inline" id="utc-clock">--:--:-- UTC</span>
+        </div>
+        <span class="text-zinc-600 hidden lg:inline">|</span>
+        <span class="hidden lg:flex items-center gap-1.5 text-emerald-400">
+          <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+          <span>AVAILABLE FOR INTERESTING PROBLEMS</span>
+        </span>
+        <button id="sound-toggle-btn" type="button" class="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 bg-zinc-900 border border-zinc-700 hover:border-[#8B5CF6] text-zinc-400 hover:text-white transition-colors cursor-pointer text-[10px]" title="Toggle audio feedback">
+          AUDIO: OFF
+        </button>
+        <button type="button" class="open-cmd-palette hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 bg-zinc-900 border border-zinc-700 hover:border-[#8B5CF6] text-zinc-300 hover:text-white transition-colors cursor-pointer text-[10px]">
+          <span>CMD + K</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN EDITORIAL NAVIGATION BAR -->
+    <div class="border-t border-[#1a1a1a] bg-[#090909]/95 backdrop-blur-md">
+      <div class="max-w-[1500px] mx-auto px-4 py-3.5 flex items-center justify-between">
+        <!-- Logo / Monogram -->
+        <a href="#hero" class="flex items-center gap-3 group text-decoration-none">
+          <div class="w-8 h-8 bg-zinc-900 border border-zinc-700 flex items-center justify-center font-mono font-bold text-sm text-zinc-200 group-hover:border-[#8B5CF6] group-hover:text-[#A970FF] transition-all">
+            OM
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-sm tracking-tight text-zinc-100 group-hover:text-white transition-colors">
+              OM MULCHANDANI
+            </span>
+            <span class="font-mono text-[10px] text-zinc-500 tracking-wider">
+              INTERDISCIPLINARY TECHNOLOGIST
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center gap-6 font-mono text-xs tracking-wider">
+          <a href="#about" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">01. ABOUT</a>
+          <a href="#trajectory" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">02. TRAJECTORY</a>
+          <a href="#projects" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">03. EXPERIMENTS</a>
+          <a href="#lab" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">04. LAB</a>
+          <a href="#obsessions" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">05. OBSESSIONS</a>
+          <a href="#skills" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">06. TOOLKIT</a>
+          <a href="#contact" class="desktop-nav-item text-zinc-400 hover:text-white transition-colors">07. CONTACT</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="flex items-center gap-3">
+          <a href="resume.html" class="btn-brutalist btn-magnetic text-xs py-1.5 px-3">
+            <span>RESUME</span>
+            <span class="text-[#8B5CF6]">↗</span>
+          </a>
+          
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-nav-toggle" class="md:hidden p-2 text-zinc-300 hover:text-white border border-zinc-800 bg-zinc-900 focus:outline-none" aria-label="Toggle Navigation">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER (Brutalist Full-Height Panel) -->
+  <div id="mobile-nav-drawer" class="fixed inset-0 z-50 bg-[#090909] text-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 border-l border-zinc-800">
+    <div class="flex items-center justify-between border-b border-zinc-800 pb-4">
+      <div class="font-mono text-xs text-zinc-400">
+        // SYSTEM NAVIGATION
+      </div>
+      <button id="mobile-nav-close" class="p-2 border border-zinc-800 bg-zinc-900 text-zinc-300 hover:text-white" aria-label="Close menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-5 my-auto font-display text-2xl font-bold tracking-tight">
+      <a href="#about" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>01. ABOUT</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">IDENTITY</span>
+      </a>
+      <a href="#trajectory" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>02. TRAJECTORY</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">TIMELINE</span>
+      </a>
+      <a href="#projects" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>03. EXPERIMENTS</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">PROTOTYPES</span>
+      </a>
+      <a href="#lab" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>04. LAB NOTEBOOK</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">RESEARCH</span>
+      </a>
+      <a href="#obsessions" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>05. OBSESSIONS</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">INQUIRIES</span>
+      </a>
+      <a href="#skills" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>06. TOOLKIT</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">DISCIPLINES</span>
+      </a>
+      <a href="#contact" class="mobile-nav-link hover:text-[#8B5CF6] transition-colors flex items-center justify-between border-b border-zinc-900 py-2">
+        <span>07. CONTACT</span>
+        <span class="font-mono text-xs text-zinc-600 font-normal">TRANSMIT</span>
+      </a>
+    </nav>
+
+    <div class="border-t border-zinc-800 pt-4 flex flex-col gap-2 font-mono text-xs">
+      <a href="resume/resume.pdf" download="Om_Mulchandani_Resume.pdf" class="btn-brutalist btn-brutalist-accent w-full text-center py-2.5">
+        DOWNLOAD RESUME (PDF) ↓
+      </a>
+      <a href="resume.html" class="btn-brutalist btn-brutalist-outline w-full text-center py-2 text-zinc-300">
+        VIEW CV (HTML / PRINT) ↗
+      </a>
+      <div class="text-[11px] text-zinc-500 text-center mt-1">
+        OM MULCHANDANI // RAJKOT, GUJARAT, INDIA
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Asymmetric, Brutalist Research Terminal Composition)
+         ========================================================================== -->
+    <section id="hero" class="relative border-b border-[#222222] bg-[#090909] overflow-hidden bg-grid-tech pt-8 pb-16 md:pt-16 md:pb-24">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header Metadata Line -->
+        <div class="flex flex-wrap items-center justify-between gap-3 font-mono text-xs text-zinc-400 mb-8 border-b border-zinc-800 pb-3" data-aos="fade-down">
+          <div class="flex items-center gap-3">
+            <span class="text-[#8B5CF6] font-bold">OM-SYS // PORTFOLIO v1.0</span>
+            <span class="text-zinc-600">/</span>
+            <span>DATA × BIOINFORMATICS × AI</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-zinc-500">CURRENT STATUS:</span>
+            <span class="text-zinc-200 font-semibold px-2 py-0.5 bg-zinc-900 border border-zinc-800">
+              STATUS: CURIOUS
+            </span>
+          </div>
+        </div>
+
+        <!-- Asymmetrical Hero Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Main Hero Column (Cols 1-8) -->
+          <div class="lg:col-span-8 flex flex-col justify-between" data-aos="fade-right">
+            <div>
+              <!-- Micro-tag -->
+              <div class="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 font-mono text-xs text-zinc-300 mb-6">
+                <span class="w-2 h-2 bg-[#8B5CF6] inline-block"></span>
+                <span>INTERDISCIPLINARY TECHNOLOGIST</span>
+              </div>
+
+              <!-- Oversized Typographic Statement -->
+              <h1 class="text-hero-giant text-white tracking-tighter mb-6 select-none font-bold">
+                I BUILD<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-300 to-[#8B5CF6]">AT THE EDGES.</span>
+              </h1>
+
+              <!-- Secondary Persona Anchor -->
+              <p class="font-sans text-xl md:text-2xl text-zinc-300 max-w-2xl font-light leading-relaxed mb-6">
+                Data analyst by practice. Bioinformatics student by discipline. <span class="text-white font-medium border-b border-[#8B5CF6]">Builder by instinct.</span>
+              </p>
+
+              <!-- Dynamic Rotating Phrase Metadata Badge -->
+              <div class="p-3 bg-zinc-950/80 border border-zinc-800 max-w-xl mb-8 flex items-center justify-between gap-3">
+                <span class="font-mono text-[11px] text-zinc-500 uppercase tracking-widest">// CURRENT FOCUS DISCIPLINE</span>
+                <span id="rotating-microcopy" class="font-mono text-xs font-bold text-[#A970FF] transition-all duration-300">
+                  DATA ANALYST
+                </span>
+              </div>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-zinc-900">
+              <a href="#projects" class="btn-brutalist btn-brutalist-accent btn-magnetic">
+                <span>EXPLORE EXPERIMENTS</span>
+                <span>↓</span>
+              </a>
+              <a href="resume/resume.pdf" download="Om_Mulchandani_Resume.pdf" class="btn-brutalist btn-magnetic">
+                <span>DOWNLOAD RESUME (PDF)</span>
+                <span class="text-[#8B5CF6]">↓</span>
+              </a>
+              <a href="resume.html" class="btn-brutalist btn-brutalist-outline btn-magnetic">
+                <span>VIEW CV</span>
+                <span>↗</span>
+              </a>
+              <button type="button" class="btn-brutalist btn-brutalist-outline copy-email-btn">
+                <span>COPY EMAIL</span>
+                <span class="text-zinc-500 text-[10px]">ommulchandani2108@gmail.com</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Column: Personal Research Dossier & Terminal Telemetry (Cols 9-12) -->
+          <div class="lg:col-span-4" data-aos="fade-left" data-aos-delay="150">
+            <div class="bg-[#111111] border border-zinc-800 relative">
+              <!-- Terminal Window Header -->
+              <div class="bg-[#161616] border-b border-zinc-800 px-4 py-2.5 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 bg-red-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 bg-yellow-500/80 inline-block"></span>
+                  <span class="w-2.5 h-2.5 bg-emerald-500/80 inline-block"></span>
+                  <span class="ml-2 text-zinc-300 font-semibold">DOSSIER // OM-M</span>
+                </div>
+                <span class="text-[10px] text-zinc-500">SEC: PUBLIC</span>
+              </div>
+
+              <!-- Terminal Dossier Body -->
+              <div class="p-5 font-mono text-xs space-y-4">
+                
+                <div class="border-b border-zinc-800 pb-3">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// CURRENT INSTITUTIONAL AFFILIATION</div>
+                  <div class="text-zinc-100 font-semibold text-sm mt-1">TOPS TECHNOLOGIES PVT. LTD.</div>
+                  <div class="text-zinc-400 text-[11px]">Training / Professional Data Analytics Track</div>
+                  <div class="text-zinc-500 text-[10px] mt-0.5">Rajkot, Gujarat, India</div>
+                </div>
+
+                <div class="border-b border-zinc-800 pb-3">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// ACADEMIC SPECIALIZATION</div>
+                  <div class="text-zinc-100 font-semibold text-sm mt-1">B.TECH IN BIOINFORMATICS</div>
+                  <div class="text-zinc-400 text-[11px]">Undergraduate Researcher & Student</div>
+                  <div class="text-zinc-500 text-[10px] mt-0.5">Computational Biology × Algorithms</div>
+                </div>
+
+                <div class="border-b border-zinc-800 pb-3">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// EXPERIENCE PROFILE</div>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="text-zinc-200">DATA ANALYTICS PRACTICE</span>
+                    <span class="text-[#8B5CF6] font-bold">2+ YEARS</span>
+                  </div>
+                  <div class="flex items-center justify-between mt-1">
+                    <span class="text-zinc-200">PRIMARY TOOLS</span>
+                    <span class="text-zinc-400">SQL, Excel, Python, Power BI</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-1.5">// SYSTEM PHILOSOPHY</div>
+                  <div class="p-3 bg-black/60 border border-zinc-800/80 text-zinc-300 italic text-[11px] leading-relaxed">
+                    "I don't need to already know how something works to become obsessed with figuring it out."
+                  </div>
+                </div>
+
+                <!-- Live Session Telemetry Footer -->
+                <div class="pt-2 border-t border-zinc-800 flex items-center justify-between text-[10px] text-zinc-500">
+                  <span>SESSION UPTIME: <span id="system-uptime" class="text-zinc-300">00:00</span></span>
+                  <span class="text-emerald-400 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full"></span>
+                    HEARTBEAT OK
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Brutalist Coordinate Tag -->
+            <div class="mt-3 p-2 bg-zinc-950 border border-zinc-800 text-[10px] font-mono text-zinc-500 flex justify-between">
+              <span>LAT: 22.3039° N / LON: 70.8022° E</span>
+              <span class="text-[#8B5CF6]">SYSTEM ID: 419-OM</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         01 — ABOUT / PERSONAL IDENTITY
+         ========================================================================== -->
+    <section id="about" class="border-b border-[#222222] bg-[#090909] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Section Header Anchor -->
+        <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 mb-6 uppercase tracking-wider" data-aos="fade-up">
+          <span class="text-[#8B5CF6] font-bold">01 //</span>
+          <span>PERSONAL IDENTITY & INTELLECTUAL MANIFEST</span>
+        </div>
+
+        <!-- Hero Headline within About -->
+        <div class="mb-14" data-aos="fade-up" data-aos-delay="50">
+          <h2 class="text-editorial-h1 text-white max-w-5xl leading-none">
+            I LIKE PROBLEMS THAT DON'T FIT NEATLY INTO ONE BOX.
+          </h2>
+        </div>
+
+        <!-- 2-Column Editorial Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left Column: The Authentic Narrative Text (Cols 1-7) -->
+          <div class="lg:col-span-7 space-y-6 text-zinc-300 font-sans text-lg md:text-xl leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              I'm an interdisciplinary technologist working at the intersection of <strong class="text-white font-semibold underline decoration-[#8B5CF6] decoration-2 underline-offset-4">data, computation, biology and artificial intelligence</strong>.
+            </p>
+
+            <p class="text-zinc-400">
+              My foundation is in data analytics, but that quickly became too small a box. I found myself increasingly drawn toward bioinformatics, intelligent systems, automation and the technology emerging around them.
+            </p>
+
+            <p class="text-zinc-400">
+              I'm currently pursuing a <span class="text-zinc-200 font-medium">B.Tech in Bioinformatics</span>, while continuing to develop practical experience in analytics and exploring how computation can be used to understand increasingly complex problems.
+            </p>
+
+            <div class="p-6 bg-[#111111] border-l-2 border-[#8B5CF6] my-8 text-zinc-200 font-sans text-lg space-y-2">
+              <div class="font-mono text-xs text-[#8B5CF6] uppercase tracking-wider mb-2 font-bold">// THE INTERDISCIPLINARY SWEET SPOT</div>
+              <div>What interests me most is the space between disciplines:</div>
+              <div class="text-zinc-300 pl-4 border-l border-zinc-700 space-y-1.5 text-base">
+                <div>• The place where <span class="text-white font-medium">biological questions become computational problems</span>.</div>
+                <div>• Where <span class="text-white font-medium">data becomes a system</span>.</div>
+                <div>• Where an <span class="text-white font-medium">AI model becomes a product</span>.</div>
+                <div>• Where an <span class="text-white font-medium">idea becomes something that actually works</span>.</div>
+              </div>
+            </div>
+
+            <p class="text-zinc-400">
+              I enjoy learning technologies I don't fully understand yet. That includes artificial intelligence, agentic systems, computational biology, autonomous systems, generative interfaces, automation and whatever interesting rabbit hole appears next.
+            </p>
+
+            <p class="text-zinc-400">
+              Long term, I want to build things of my own — products, systems, experiments and eventually businesses that sit at the intersection of technology and real-world problems.
+            </p>
+
+            <p class="text-white font-medium text-xl pt-2">
+              I'm not particularly interested in staying inside one lane. <span class="text-[#A970FF] font-bold">I'd rather learn enough about several disciplines to connect the dots.</span>
+            </p>
+          </div>
+
+          <!-- Right Column: Trajectory Schema & Persona Traits (Cols 8-12) -->
+          <div class="lg:col-span-5 space-y-8" data-aos="fade-up" data-aos-delay="200">
+            
+            <!-- Intellectual Trajectory Visualization -->
+            <div class="bg-[#111111] border border-zinc-800 p-6">
+              <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-4 flex items-center justify-between">
+                <span>// INTELLECTUAL TRAJECTORY</span>
+                <span class="text-[#8B5CF6]">VECTOR EVOLUTION</span>
+              </div>
+
+              <div class="space-y-3 font-mono text-xs">
+                <!-- Step 1 -->
+                <div class="p-3 bg-black border border-zinc-800 hover:border-[#8B5CF6] transition-colors flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-zinc-600 font-bold">01</span>
+                    <span class="text-white font-semibold">DATA</span>
+                  </div>
+                  <span class="text-zinc-500 text-[11px]">SQL, Excel, Pandas, EDA, BI</span>
+                </div>
+                <div class="text-center text-zinc-700 text-xs">↓</div>
+                <!-- Step 2 -->
+                <div class="p-3 bg-black border border-zinc-800 hover:border-[#8B5CF6] transition-colors flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-zinc-600 font-bold">02</span>
+                    <span class="text-white font-semibold">COMPUTATION</span>
+                  </div>
+                  <span class="text-zinc-500 text-[11px]">Python, APIs, Automation, Linux</span>
+                </div>
+                <div class="text-center text-zinc-700 text-xs">↓</div>
+                <!-- Step 3 -->
+                <div class="p-3 bg-black border border-zinc-800 hover:border-[#8B5CF6] transition-colors flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-zinc-600 font-bold">03</span>
+                    <span class="text-white font-semibold">BIOLOGY</span>
+                  </div>
+                  <span class="text-zinc-500 text-[11px]">B.Tech Bioinformatics, Genomics</span>
+                </div>
+                <div class="text-center text-zinc-700 text-xs">↓</div>
+                <!-- Step 4 -->
+                <div class="p-3 bg-black border border-zinc-800 hover:border-[#8B5CF6] transition-colors flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-[#8B5CF6] font-bold">04</span>
+                    <span class="text-white font-semibold">AI & AGENTS</span>
+                  </div>
+                  <span class="text-[#8B5CF6] text-[11px]">LLMs, RAG, Semantic Search, Agents</span>
+                </div>
+                <div class="text-center text-zinc-700 text-xs">↓</div>
+                <!-- Step 5 -->
+                <div class="p-3 bg-purple-950/20 border border-purple-500/50 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-purple-400 font-bold">05</span>
+                    <span class="text-white font-semibold">SYSTEMS → PRODUCTS</span>
+                  </div>
+                  <span class="text-purple-300 text-[11px]">Autonomous Tools & Startups</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Underlying Personality Traits Matrix -->
+            <div class="bg-[#111111] border border-zinc-800 p-6">
+              <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-4">
+                // OPERATIONAL CHARACTERISTICS
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+                <div class="p-2.5 bg-black/60 border border-zinc-800/80">
+                  <div class="text-[#8B5CF6] font-semibold mb-0.5">ABSURDLY CURIOUS</div>
+                  <div class="text-zinc-400 text-[11px]">Dives into unfamiliar technical depths without hesitation.</div>
+                </div>
+                <div class="p-2.5 bg-black/60 border border-zinc-800/80">
+                  <div class="text-[#8B5CF6] font-semibold mb-0.5">BEGINNER-READY</div>
+                  <div class="text-zinc-400 text-[11px]">Comfortable feeling naive while decoding complex systems.</div>
+                </div>
+                <div class="p-2.5 bg-black/60 border border-zinc-800/80">
+                  <div class="text-[#8B5CF6] font-semibold mb-0.5">SYSTEMS THINKER</div>
+                  <div class="text-zinc-400 text-[11px]">Maps biological rules to computational architectures.</div>
+                </div>
+                <div class="p-2.5 bg-black/60 border border-zinc-800/80">
+                  <div class="text-[#8B5CF6] font-semibold mb-0.5">FUTURE FOUNDER</div>
+                  <div class="text-zinc-400 text-[11px]">Believes research experiments must evolve into tangible products.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 — EXPERIENCE / TRAJECTORY (Chronological Evolution)
+         ========================================================================== -->
+    <section id="trajectory" class="border-b border-[#222222] bg-[#0c0c0c] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b border-zinc-800 pb-4 mb-12" data-aos="fade-up">
+          <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider">
+            <span class="text-[#8B5CF6] font-bold">02 //</span>
+            <span>EXPERIENCE & LEARNING TRAJECTORY</span>
+          </div>
+          <div class="font-mono text-xs text-zinc-400">
+            2+ YEARS IN DATA ANALYTICS
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left: The Trajectory Timeline By Year (Cols 1-5) -->
+          <div class="lg:col-span-5 space-y-8" data-aos="fade-right">
+            <div>
+              <h2 class="text-editorial-h2 text-white font-bold mb-4">
+                THE LEARNING CURVE
+              </h2>
+              <p class="font-sans text-zinc-400 text-sm leading-relaxed">
+                Rather than treating skills as an arbitrary checklist, this trajectory illustrates an expanding analytical capability transitioning from operational reporting toward agentic intelligence.
+              </p>
+            </div>
+
+            <!-- Evolutionary Stack Cards -->
+            <div class="space-y-4">
+              <!-- 2024 -->
+              <div class="p-5 bg-black border border-zinc-800 hover:border-zinc-700 transition-colors">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="font-display font-bold text-2xl text-zinc-100">2024</span>
+                  <span class="font-mono text-xs text-zinc-500 uppercase tracking-wider">FOUNDATION: DATA ANALYTICS</span>
+                </div>
+                <div class="text-xs text-zinc-400 mb-3 font-sans">
+                  Rigorous data hygiene, SQL manipulation, Excel modeling, and exploratory data analysis. Building decision-ready dashboards.
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-tag">Advanced Excel</span>
+                  <span class="tech-tag">SQL</span>
+                  <span class="tech-tag">Power BI</span>
+                  <span class="tech-tag">Pandas</span>
+                  <span class="tech-tag">NumPy</span>
+                  <span class="tech-tag">Data Cleaning</span>
+                  <span class="tech-tag">KPI Reporting</span>
+                </div>
+              </div>
+
+              <!-- 2025 -->
+              <div class="p-5 bg-black border border-zinc-800 hover:border-[#8B5CF6] transition-colors">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="font-display font-bold text-2xl text-zinc-100">2025</span>
+                  <span class="font-mono text-xs text-[#8B5CF6] uppercase tracking-wider font-semibold">EXPANSION: AI & AUTOMATION</span>
+                </div>
+                <div class="text-xs text-zinc-400 mb-3 font-sans">
+                  Transition from static reporting to autonomous pipelines. Semantic search, vector embeddings, LLM orchestration, and RAG architectures.
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-tag tech-tag-accent">Generative AI</span>
+                  <span class="tech-tag tech-tag-accent">LLMs</span>
+                  <span class="tech-tag tech-tag-accent">RAG</span>
+                  <span class="tech-tag tech-tag-accent">Semantic Search</span>
+                  <span class="tech-tag tech-tag-accent">Embeddings</span>
+                  <span class="tech-tag tech-tag-accent">AI Agents</span>
+                  <span class="tech-tag tech-tag-accent">Python Automation</span>
+                </div>
+              </div>
+
+              <!-- 2026 -->
+              <div class="p-5 bg-purple-950/20 border border-purple-500/50">
+                <div class="flex items-baseline justify-between mb-2">
+                  <span class="font-display font-bold text-2xl text-purple-300">2026+</span>
+                  <span class="font-mono text-xs text-purple-400 uppercase tracking-wider font-semibold">SYNTHESIS: BIO × SYSTEMS</span>
+                </div>
+                <div class="text-xs text-zinc-300 mb-3 font-sans">
+                  Convergence of bioinformatics datasets, computational algorithms, and intelligent research agents into working products.
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  <span class="tech-tag tech-tag-accent">Bioinformatics</span>
+                  <span class="tech-tag tech-tag-accent">Genomic Viz</span>
+                  <span class="tech-tag tech-tag-accent">Scientific Computing</span>
+                  <span class="tech-tag tech-tag-accent">Autonomous Systems</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Professional Roles & Experience Timeline (Cols 6-12) -->
+          <div class="lg:col-span-7 space-y-6" data-aos="fade-left">
+            <div class="font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+              // CHRONOLOGICAL ENGAGEMENTS & DEMO TRACKS
+            </div>
+
+            <!-- Role 1: Tops Technologies (Current) -->
+            <div class="p-6 bg-[#111111] border border-zinc-800 hover:border-zinc-700 transition-all">
+              <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-zinc-800 pb-3 mb-4">
+                <div>
+                  <div class="font-mono text-xs text-emerald-400 font-semibold uppercase flex items-center gap-2">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+                    ACTIVE TRAINING // RAJKOT, INDIA
+                  </div>
+                  <h3 class="font-display font-bold text-xl text-white mt-1">TOPS TECHNOLOGIES PVT. LTD.</h3>
+                  <div class="text-zinc-400 font-mono text-xs">Training / Data Analytics Track</div>
+                </div>
+                <span class="font-mono text-xs text-zinc-500 bg-zinc-900 px-2 py-1 border border-zinc-800">
+                  CURRENT / ONGOING
+                </span>
+              </div>
+              <p class="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                Structured immersive training grounding foundational data science and enterprise business intelligence. Focuses on transforming raw business records into structured analytical models, performing exploratory data analysis, and building interactive KPI dashboards.
+              </p>
+              <div class="space-y-1.5 font-mono text-xs text-zinc-400 mb-4">
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Executing relational database querying, multi-table joins, aggregations, and window functions in SQL.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Designing enterprise-grade Power BI dashboards with DAX calculations and data transformation pipelines.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Applying exploratory statistical techniques and data preprocessing in Python (Pandas/NumPy).</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2 border-t border-zinc-800/80">
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Advanced Excel</span>
+                <span class="tech-tag">Power BI</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">EDA</span>
+                <span class="tech-tag">DAX</span>
+              </div>
+            </div>
+
+            <!-- Role 2: Helix Analytics (Fictional/Demo) -->
+            <div class="p-6 bg-[#111111] border border-zinc-800 hover:border-zinc-700 transition-all relative">
+              <div class="absolute top-3 right-3 font-mono text-[9px] text-zinc-600 border border-zinc-800 px-1.5 py-0.5">
+                FICTIONAL / DEMO CASE
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-zinc-800 pb-3 mb-4">
+                <div>
+                  <div class="font-mono text-xs text-zinc-500 uppercase">ENTRY-LEVEL ANALYTICS</div>
+                  <h3 class="font-display font-bold text-xl text-white mt-1">HELIX ANALYTICS</h3>
+                  <div class="text-zinc-400 font-mono text-xs">Entry-Level Data Analyst</div>
+                </div>
+                <span class="font-mono text-xs text-zinc-500 bg-zinc-900 px-2 py-1 border border-zinc-800">
+                  2024 // COMPLETED
+                </span>
+              </div>
+              <p class="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                Worked on analytical workflows designed to transform messy operational data into structured insights and decision-ready reporting. Built repeatable data-cleaning processes, dashboards and analytical views while developing a stronger understanding of how data moves from raw input to actionable information.
+              </p>
+              <div class="space-y-1.5 font-mono text-xs text-zinc-400 mb-4">
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Cleaned and validated multi-source tabular datasets with stringent outlier and null-handling checks.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Automated recurring weekly operational reporting, cutting manual compilation hours by 60%.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Translated non-technical stakeholder questions into precise analytical queries and visual briefs.</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2 border-t border-zinc-800/80">
+                <span class="tech-tag">Excel</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Data Visualization</span>
+              </div>
+            </div>
+
+            <!-- Role 3: Axiom Labs (Fictional/Demo) -->
+            <div class="p-6 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all relative">
+              <div class="absolute top-3 right-3 font-mono text-[9px] text-[#8B5CF6] border border-purple-900/60 px-1.5 py-0.5">
+                FICTIONAL / DEMO CASE
+              </div>
+              <div class="flex flex-wrap items-baseline justify-between gap-2 border-b border-zinc-800 pb-3 mb-4">
+                <div>
+                  <div class="font-mono text-xs text-[#8B5CF6] uppercase">APPLIED INTELLIGENCE LAB</div>
+                  <h3 class="font-display font-bold text-xl text-white mt-1">AXIOM LABS</h3>
+                  <div class="text-zinc-400 font-mono text-xs">AI Research Intern</div>
+                </div>
+                <span class="font-mono text-xs text-zinc-500 bg-zinc-900 px-2 py-1 border border-zinc-800">
+                  2025 // RESEARCH
+                </span>
+              </div>
+              <p class="font-sans text-sm text-zinc-300 leading-relaxed mb-4">
+                Explored practical applications of artificial intelligence across research and analytical workflows, experimenting with LLM-powered systems, semantic retrieval, knowledge extraction and automation. Represented the pivotal shift <em class="text-white">from analyzing static data to building intelligent systems</em>.
+              </p>
+              <div class="space-y-1.5 font-mono text-xs text-zinc-400 mb-4">
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Evaluated vector embedding dimensions and chunking strategies across dense scientific literature corpus.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Built prototype RAG pipelines with semantic re-ranking and structured JSON response schemas.</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <span class="text-zinc-600">›</span>
+                  <span>Investigated autonomous multi-step agent tools with iterative self-critique loops.</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-2 border-t border-zinc-800/80">
+                <span class="tech-tag tech-tag-accent">LLM Workflows</span>
+                <span class="tech-tag tech-tag-accent">RAG</span>
+                <span class="tech-tag tech-tag-accent">Semantic Search</span>
+                <span class="tech-tag tech-tag-accent">Embeddings</span>
+                <span class="tech-tag tech-tag-accent">AI Agents</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 — SELECTED EXPERIMENTS (Projects with Interactive Scientific Interfaces)
+         ========================================================================== -->
+    <section id="projects" class="border-b border-[#222222] bg-[#090909] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-16" data-aos="fade-up">
+          <div>
+            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+              <span class="text-[#8B5CF6] font-bold">03 //</span>
+              <span>EXPERIMENTAL ARTIFACTS & PROTOTYPES</span>
+            </div>
+            <h2 class="text-editorial-h1 text-white leading-none">
+              SELECTED EXPERIMENTS
+            </h2>
+          </div>
+          <p class="font-mono text-xs text-zinc-400 max-w-md italic">
+            "Projects created somewhere between curiosity, research and 'I wonder if this would work.'"
+          </p>
+        </div>
+
+        <div class="space-y-20">
+          
+          <!-- ====================================================================
+               PROJECT 01: GENOME X (Computational Biology Visualization System)
+               ==================================================================== -->
+          <article class="project-card bg-[#111111] border border-zinc-800 p-6 md:p-8" data-aos="fade-up">
+            <div class="project-accent-bar"></div>
+            
+            <!-- Project Meta Header -->
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800 pb-4 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-display font-bold text-[#8B5CF6]">01</span>
+                <span class="text-zinc-600">/</span>
+                <span class="text-zinc-300 font-semibold tracking-wider">COMPUTATIONAL BIOLOGY</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-zinc-500">STATUS:</span>
+                <span class="text-emerald-400 font-bold px-2 py-0.5 bg-emerald-950/40 border border-emerald-800/60">EXPERIMENTAL</span>
+                <span class="text-zinc-600">|</span>
+                <span class="text-zinc-400">YEAR: 2026</span>
+              </div>
+            </div>
+
+            <!-- Two-column: Context on Left, Scientific Software Simulator on Right -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Left Context -->
+              <div class="lg:col-span-4 space-y-4">
+                <h3 class="text-editorial-h2 text-white font-bold tracking-tight">GENOME X</h3>
+                <div class="font-mono text-xs text-[#8B5CF6]">Computational Biology Visualization System</div>
+                <p class="font-sans text-sm text-zinc-300 leading-relaxed">
+                  An experimental interface for exploring complex genomic information through visual, interactive and computational representations. Built to bridge molecular biology data structures with modern web ergonomics.
+                </p>
+
+                <div class="p-4 bg-black/60 border border-zinc-800 font-mono text-xs space-y-2">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// SYSTEM CAPABILITIES</div>
+                  <div class="text-zinc-300">• Variant call parsing (VCF 4.2 standard)</div>
+                  <div class="text-zinc-300">• Interactive exon/intron boundary visualizer</div>
+                  <div class="text-zinc-300">• RNA-seq expression heatmap cross-indexing</div>
+                  <div class="text-zinc-300">• Real-time pathogenic hotspot annotation</div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span class="tech-tag">Computational Biology</span>
+                  <span class="tech-tag">Genomic Viz</span>
+                  <span class="tech-tag">SVG Coordinates</span>
+                  <span class="tech-tag">Bioinformatics</span>
+                  <span class="tech-tag">JavaScript</span>
+                </div>
+              </div>
+
+              <!-- Right: BELIEVABLE SCIENTIFIC SOFTWARE INTERFACE -->
+              <div class="lg:col-span-8 bg-black border border-zinc-800 relative">
+                <!-- App Title Bar -->
+                <div class="bg-[#181818] border-b border-zinc-800 px-4 py-2 flex flex-wrap items-center justify-between text-xs font-mono">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 bg-[#8B5CF6] inline-block"></span>
+                    <span class="text-white font-semibold tracking-wider">GENOME_X // SEQUENCE & MUTATION EXPLORER</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <label for="genomex-gene-select" class="text-zinc-500 text-[10px]">LOCUS:</label>
+                    <select id="genomex-gene-select" class="bg-black text-purple-300 border border-zinc-700 text-xs px-2 py-0.5 font-mono cursor-pointer focus:outline-none focus:border-[#8B5CF6]">
+                      <option value="CFTR">CFTR (Cystic Fibrosis Transmembrane Conductance)</option>
+                      <option value="TP53">TP53 (Tumor Protein P53 Hotspots)</option>
+                      <option value="BRCA1">BRCA1 (DNA Repair / Breast Cancer 1)</option>
+                      <option value="APOE">APOE (Apolipoprotein E Alleles)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Scientific Telemetry Strip -->
+                <div class="p-3 bg-zinc-950 border-b border-zinc-900 grid grid-cols-1 sm:grid-cols-3 gap-2 font-mono text-[11px]">
+                  <div>
+                    <span class="text-zinc-500 block text-[9px] uppercase">CHROMOSOME LOCUS</span>
+                    <span id="genomex-locus" class="text-zinc-200 font-medium">chr7:117,479,963-117,668,665</span>
+                  </div>
+                  <div>
+                    <span class="text-zinc-500 block text-[9px] uppercase">KNOWN VARIANTS</span>
+                    <span id="genomex-mutation-count" class="text-zinc-200 font-medium">1,894 cataloged variants</span>
+                  </div>
+                  <div>
+                    <span class="text-zinc-500 block text-[9px] uppercase">MEAN EXPRESSION</span>
+                    <span id="genomex-expression-val" class="text-[#8B5CF6] font-bold">88.4 TPM</span>
+                  </div>
+                </div>
+
+                <!-- Sequence Viewer Console -->
+                <div class="p-4">
+                  <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 mb-1.5 uppercase">
+                    <span>// CODING REGION (5' → 3') — CLICK HOTSPOT TO INSPECT</span>
+                    <span class="text-purple-400">FASTA LEN: 1,480 AA</span>
+                  </div>
+                  <div id="genomex-seq-display" class="p-3 bg-[#0d0d0d] border border-zinc-800 font-mono text-[11px] leading-relaxed break-all select-all text-zinc-300">
+                    <!-- Injected by JavaScript simulation -->
+                  </div>
+                </div>
+
+                <!-- Interactive Tissue Expression Heatmap -->
+                <div class="p-4 pt-0">
+                  <div class="flex items-center justify-between font-mono text-[10px] text-zinc-500 mb-1.5 uppercase">
+                    <span>// MULTI-TISSUE RNA-SEQ EXPRESSION PROFILE</span>
+                    <span class="text-zinc-400">NORMALIZED TPM SCORE</span>
+                  </div>
+                  <div id="genomex-heatmap-bars" class="h-24 bg-[#0d0d0d] border border-zinc-800 p-2 flex items-end gap-1.5">
+                    <!-- Bars injected by JavaScript -->
+                  </div>
+                </div>
+
+                <div class="px-4 py-2 bg-zinc-950 border-t border-zinc-900 font-mono text-[10px] text-zinc-500 flex justify-between">
+                  <span>RENDER ENGINE: DYNAMIC SVG/DOM</span>
+                  <span class="text-zinc-400">SOURCE: NCBI CLINVAR / ENSEMBL REST API</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- ====================================================================
+               PROJECT 02: ATLAS (AI Research Intelligence System)
+               ==================================================================== -->
+          <article class="project-card bg-[#111111] border border-zinc-800 p-6 md:p-8" data-aos="fade-up">
+            <div class="project-accent-bar"></div>
+            
+            <!-- Project Meta Header -->
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800 pb-4 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-display font-bold text-[#8B5CF6]">02</span>
+                <span class="text-zinc-600">/</span>
+                <span class="text-zinc-300 font-semibold tracking-wider">AI RESEARCH INTELLIGENCE</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-zinc-500">STATUS:</span>
+                <span class="text-purple-400 font-bold px-2 py-0.5 bg-purple-950/40 border border-purple-800/60">PROTOTYPE</span>
+                <span class="text-zinc-600">|</span>
+                <span class="text-zinc-400">YEAR: 2025</span>
+              </div>
+            </div>
+
+            <!-- Two-column: Narrative on Left, RAG Research Interface on Right -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Left Context -->
+              <div class="lg:col-span-4 space-y-4">
+                <h3 class="text-editorial-h2 text-white font-bold tracking-tight">ATLAS</h3>
+                <div class="font-mono text-xs text-[#8B5CF6]">AI Research Intelligence System</div>
+                <p class="font-sans text-sm text-zinc-300 leading-relaxed">
+                  A prototype research system designed to transform large collections of research papers and technical documents into structured, searchable knowledge through RAG and citation graph analysis.
+                </p>
+
+                <div class="p-4 bg-black/60 border border-zinc-800 font-mono text-xs space-y-2">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// ARCHITECTURE PIPELINE</div>
+                  <div class="text-zinc-300"><span class="text-purple-400">1. Ingestion:</span> PDF chunking with layout preservation</div>
+                  <div class="text-zinc-300"><span class="text-purple-400">2. Vectorization:</span> 1536-dim semantic embeddings</div>
+                  <div class="text-zinc-300"><span class="text-purple-400">3. Graph Linkage:</span> Cross-paper citation topology</div>
+                  <div class="text-zinc-300"><span class="text-purple-400">4. Synthesis:</span> Verified hallucination-free generation</div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span class="tech-tag tech-tag-accent">RAG</span>
+                  <span class="tech-tag tech-tag-accent">Semantic Search</span>
+                  <span class="tech-tag tech-tag-accent">Citation Graph</span>
+                  <span class="tech-tag tech-tag-accent">Embeddings</span>
+                  <span class="tech-tag tech-tag-accent">LLM Synthesis</span>
+                </div>
+              </div>
+
+              <!-- Right: INTERACTIVE AI RESEARCH PROTOTYPE -->
+              <div class="lg:col-span-8 bg-black border border-zinc-800 relative">
+                <!-- App Title Bar -->
+                <div class="bg-[#181818] border-b border-zinc-800 px-4 py-2 flex flex-wrap items-center justify-between text-xs font-mono">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 bg-emerald-400 inline-block"></span>
+                    <span class="text-white font-semibold tracking-wider">ATLAS // SEMANTIC RESEARCH ENGINE</span>
+                  </div>
+                  <div id="atlas-graph-status" class="text-zinc-400 text-[10px]">
+                    GRAPH NODES: 14 | CHUNKS: 8 | RAG LATENCY: 142ms
+                  </div>
+                </div>
+
+                <!-- Query Search Bar with Presets -->
+                <div class="p-4 border-b border-zinc-800 bg-zinc-950">
+                  <div class="flex items-center gap-2 mb-2">
+                    <input id="atlas-query-input" type="text" class="flex-1 bg-black border border-zinc-700 text-zinc-100 text-xs px-3 py-2 font-mono focus:outline-none focus:border-[#8B5CF6]" value="CRISPR-Cas12a off-target kinetic models" placeholder="Enter research query...">
+                    <button id="atlas-run-btn" class="btn-brutalist btn-brutalist-accent text-xs py-2 px-4 cursor-pointer">
+                      SYNTHESIZE
+                    </button>
+                  </div>
+                  <!-- Presets -->
+                  <div class="flex flex-wrap items-center gap-1.5 pt-1">
+                    <span class="font-mono text-[9px] text-zinc-500 uppercase">PRESETS:</span>
+                    <button class="atlas-preset-btn text-[10px] font-mono px-2 py-0.5 bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors" data-query="CRISPR-Cas12a off-target kinetic models">
+                      CRISPR-Cas12a Kinetics
+                    </button>
+                    <button class="atlas-preset-btn text-[10px] font-mono px-2 py-0.5 bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors" data-query="Transformer embeddings in protein folding">
+                      Protein Embeddings
+                    </button>
+                    <button class="atlas-preset-btn text-[10px] font-mono px-2 py-0.5 bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-[#8B5CF6] transition-colors" data-query="Autonomous multi-agent research pipelines">
+                      Multi-agent Research
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Synthesis & Results Pane -->
+                <div id="atlas-results" class="p-4 min-h-[220px] max-h-[340px] overflow-y-auto">
+                  <!-- Populated by JavaScript simulation -->
+                </div>
+
+                <div class="px-4 py-2 bg-zinc-950 border-t border-zinc-900 font-mono text-[10px] text-zinc-500 flex justify-between">
+                  <span>VECTOR DISTANCE: COSINE METRIC</span>
+                  <span class="text-zinc-400">RETRIEVAL ENGINE: HYBRID DENSE + BM25</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+
+          <!-- ====================================================================
+               PROJECT 03: PROJECT PULSE (AI × Bioinformatics Research Experiment)
+               ==================================================================== -->
+          <article class="project-card bg-[#111111] border border-zinc-800 p-6 md:p-8" data-aos="fade-up">
+            <div class="project-accent-bar"></div>
+            
+            <!-- Project Meta Header -->
+            <div class="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800 pb-4 mb-6 font-mono text-xs">
+              <div class="flex items-center gap-3">
+                <span class="text-2xl font-display font-bold text-[#8B5CF6]">03</span>
+                <span class="text-zinc-600">/</span>
+                <span class="text-zinc-300 font-semibold tracking-wider">BIOINFORMATICS × AI SYSTEMS</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-zinc-500">STATUS:</span>
+                <span class="text-yellow-400 font-bold px-2 py-0.5 bg-yellow-950/40 border border-yellow-800/60">ACTIVE RESEARCH</span>
+                <span class="text-zinc-600">|</span>
+                <span class="text-zinc-400">YEAR: 2026</span>
+              </div>
+            </div>
+
+            <!-- Two-column: Narrative on Left, Multi-modal Bio Stream on Right -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Left Context -->
+              <div class="lg:col-span-4 space-y-4">
+                <h3 class="text-editorial-h2 text-white font-bold tracking-tight">PROJECT PULSE</h3>
+                <div class="font-mono text-xs text-[#8B5CF6]">AI × Bioinformatics Research Experiment</div>
+                <p class="font-sans text-sm text-zinc-300 leading-relaxed">
+                  An exploratory project investigating how modern AI systems can assist biological data interpretation, latent biomarker discovery, and research workflows without requiring manual relational parsing.
+                </p>
+
+                <div class="p-4 bg-black/60 border border-zinc-800 font-mono text-xs space-y-2">
+                  <div class="text-[10px] text-zinc-500 uppercase tracking-widest">// RESEARCH THEMES</div>
+                  <div class="text-zinc-300">• Biological dataset stream ingestion</div>
+                  <div class="text-zinc-300">• Unsupervised latent manifold projection</div>
+                  <div class="text-zinc-300">• Automated scientific hypothesis drafting</div>
+                  <div class="text-zinc-300">• Non-clinical exploratory data tooling</div>
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 pt-2">
+                  <span class="tech-tag">Biological Datasets</span>
+                  <span class="tech-tag">Pattern Discovery</span>
+                  <span class="tech-tag">Computational Biology</span>
+                  <span class="tech-tag">Machine-Assisted Analysis</span>
+                </div>
+              </div>
+
+              <!-- Right: LIVE BIO DATASTREAM CONSOLE -->
+              <div class="lg:col-span-8 bg-black border border-zinc-800 relative">
+                <!-- App Title Bar -->
+                <div class="bg-[#181818] border-b border-zinc-800 px-4 py-2 flex flex-wrap items-center justify-between text-xs font-mono">
+                  <div class="flex items-center gap-3">
+                    <span class="w-2.5 h-2.5 bg-purple-400 inline-block animate-pulse"></span>
+                    <span class="text-white font-semibold tracking-wider">PROJECT_PULSE // MULTIMODAL INGESTION</span>
+                  </div>
+                  <div class="flex items-center gap-3 text-zinc-400 text-[10px]">
+                    <span>ENTROPY: <span id="pulse-entropy-val" class="text-purple-400">0.284 bit/nt</span></span>
+                    <span>ANOMALY RATE: <span id="pulse-anomaly-rate" class="text-emerald-400">0.62%</span></span>
+                  </div>
+                </div>
+
+                <!-- Real-time Console Log Stream -->
+                <div class="p-4">
+                  <div class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-2 flex items-center justify-between">
+                    <span>// LIVE EVENT BUS (STREAMING GEO & ARRAY DATA)</span>
+                    <span class="text-emerald-400">BUFFER: 100% OK</span>
+                  </div>
+                  <div id="pulse-data-stream" class="p-3 bg-[#0d0d0d] border border-zinc-800 font-mono text-xs min-h-[180px] space-y-1">
+                    <!-- Populated dynamically by JavaScript -->
+                  </div>
+                </div>
+
+                <!-- Cross-Correlation Matrix Snapshot -->
+                <div class="p-4 pt-0">
+                  <div class="font-mono text-[10px] text-zinc-500 uppercase tracking-widest mb-2">
+                    // BIOLOGICAL VARIABLE CROSS-CORRELATION MATRIX
+                  </div>
+                  <div class="grid grid-cols-4 gap-1.5 text-center font-mono text-[10px]">
+                    <div class="p-2 bg-zinc-900 border border-zinc-800 text-zinc-400">VAR_A × VAR_B<br><span class="text-purple-400 font-bold">+0.88</span></div>
+                    <div class="p-2 bg-zinc-900 border border-zinc-800 text-zinc-400">VAR_A × VAR_C<br><span class="text-zinc-500">-0.14</span></div>
+                    <div class="p-2 bg-zinc-900 border border-zinc-800 text-zinc-400">VAR_B × VAR_D<br><span class="text-purple-400 font-bold">+0.72</span></div>
+                    <div class="p-2 bg-purple-950/40 border border-purple-500/40 text-purple-200">ANOMALY FLAG<br><span class="text-emerald-400 font-bold">NOMINAL</span></div>
+                  </div>
+                </div>
+
+                <div class="px-4 py-2 bg-zinc-950 border-t border-zinc-900 font-mono text-[10px] text-zinc-500 flex justify-between">
+                  <span>FRAMEWORK: NUMERICAL SIMULATION</span>
+                  <span class="text-zinc-400">PURPOSE: RESEARCH PROTOTYPING</span>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 — LAB NOTEBOOK (Private Research Dossier)
+         ========================================================================== -->
+    <section id="lab" class="border-b border-[#222222] bg-[#0c0c0c] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-12" data-aos="fade-up">
+          <div>
+            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+              <span class="text-[#8B5CF6] font-bold">04 //</span>
+              <span>EXPERIMENTAL LAB NOTEBOOK</span>
+            </div>
+            <h2 class="text-editorial-h1 text-white leading-none">
+              LAB NOTEBOOK
+            </h2>
+          </div>
+          <p class="font-mono text-xs text-zinc-400 max-w-md italic">
+            "Ideas I am currently investigating before I know what they become."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Tabs on Left (Cols 1-4) -->
+          <div class="lg:col-span-4 space-y-3 font-mono text-xs" data-aos="fade-right">
+            
+            <div class="lab-tab active p-4 bg-zinc-900 border border-zinc-800 cursor-pointer" data-tab="lab-entry-01">
+              <div class="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
+                <span>LAB ENTRY // 01</span>
+                <span class="text-purple-400 font-bold">INVESTIGATING</span>
+              </div>
+              <div class="text-zinc-100 font-sans font-bold text-sm">
+                Can AI explain a biological database better than a dashboard?
+              </div>
+            </div>
+
+            <div class="lab-tab p-4 bg-black border border-zinc-800 hover:border-zinc-700 cursor-pointer" data-tab="lab-entry-02">
+              <div class="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
+                <span>LAB ENTRY // 02</span>
+                <span class="text-emerald-400 font-bold">PROTOTYPE</span>
+              </div>
+              <div class="text-zinc-100 font-sans font-bold text-sm">
+                AI Operating System Architecture
+              </div>
+            </div>
+
+            <div class="lab-tab p-4 bg-black border border-zinc-800 hover:border-zinc-700 cursor-pointer" data-tab="lab-entry-03">
+              <div class="flex items-center justify-between text-[10px] text-zinc-500 mb-1">
+                <span>LAB ENTRY // 03</span>
+                <span class="text-yellow-400 font-bold">ALWAYS</span>
+              </div>
+              <div class="text-zinc-100 font-sans font-bold text-sm">
+                Building things I don't know how to build yet.
+              </div>
+            </div>
+
+            <!-- Lab Metadata box -->
+            <div class="p-4 bg-black/50 border border-zinc-800 text-[11px] text-zinc-500 space-y-2 mt-6">
+              <div class="text-zinc-300 font-bold uppercase tracking-wider">// RESEARCH LAB DIRECTIVE</div>
+              <p class="leading-relaxed">
+                Entries here reflect active thought experiments, uncommitted prototypes, and theoretical architectural designs that sit outside formal deliverables.
+              </p>
+            </div>
+          </div>
+
+          <!-- Content Displays on Right (Cols 5-12) -->
+          <div class="lg:col-span-8 bg-[#111111] border border-zinc-800 p-6 md:p-8" data-aos="fade-left">
+            
+            <!-- LAB ENTRY 01 -->
+            <div id="lab-entry-01" class="lab-content space-y-6">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800 pb-3 font-mono text-xs">
+                <span class="text-[#8B5CF6] font-bold">LAB 01 // THOUGHT EXPERIMENT</span>
+                <span class="text-zinc-500">STATUS: INVESTIGATING</span>
+              </div>
+
+              <div>
+                <h3 class="text-editorial-h2 text-white font-bold mb-3">
+                  CAN AI EXPLAIN A BIOLOGICAL DATABASE BETTER THAN A DASHBOARD?
+                </h3>
+                <p class="font-sans text-base text-zinc-300 leading-relaxed">
+                  A thought experiment around whether an intelligent conversational agent could help researchers understand biological datasets dynamically rather than forcing them to navigate increasingly complicated, rigid SQL dashboards with hundreds of filter dropdowns.
+                </p>
+              </div>
+
+              <!-- Interactive Comparative Demo -->
+              <div class="p-4 bg-black border border-zinc-800">
+                <div class="flex items-center justify-between border-b border-zinc-800 pb-2 mb-4 font-mono text-xs">
+                  <span class="text-zinc-400">// COMPARATIVE TESTBED</span>
+                  <button id="lab1-toggle-mode" class="text-xs text-[#8B5CF6] hover:text-white underline cursor-pointer">
+                    SWITCH VIEW: CONVERSATIONAL AI REASONING
+                  </button>
+                </div>
+
+                <!-- Traditional Dashboard View -->
+                <div id="lab1-view-dashboard" class="space-y-3 font-mono text-xs">
+                  <div class="text-zinc-500">// CURRENT STANDARD: COMPLEX BIOLOGICAL DASHBOARD</div>
+                  <div class="p-3 bg-zinc-900 border border-zinc-800 space-y-2 text-zinc-400">
+                    <div class="flex items-center justify-between text-[11px]">
+                      <span>SQL QUERY: SELECT * FROM kinase_activity WHERE kd &lt; 50;</span>
+                      <span class="text-zinc-500">Execution: 1.2s</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
+                      <div class="p-2 bg-black border border-zinc-800">FILTERS: 24 active</div>
+                      <div class="p-2 bg-black border border-zinc-800">TABLE COLS: 58 fields</div>
+                      <div class="p-2 bg-black border border-zinc-800">USER COGNITIVE LOAD: High</div>
+                    </div>
+                    <div class="text-[11px] text-zinc-500 italic">
+                      "Researcher must already know the exact schema, table names, and column types to formulate hypotheses."
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conversational Agent View (Hidden initially) -->
+                <div id="lab1-view-agent" class="space-y-3 font-mono text-xs hidden">
+                  <div class="text-purple-400">// EXPERIMENTAL PARADIGM: NATURAL INTERFACE & CONTEXTUAL REASONING</div>
+                  <div class="p-3 bg-purple-950/20 border border-purple-500/40 space-y-2">
+                    <div class="text-zinc-300 font-bold">Researcher: "Which kinases in this batch have off-target affinity issues with cardiac receptors?"</div>
+                    <div class="text-purple-200 text-xs font-sans pl-3 border-l-2 border-purple-500">
+                      AI Agent: "Identified 3 candidates in your dataset. Compound #84 exhibits 12nM binding to hERG channels, suggesting high cardiotoxicity risk despite promising target potency. Recommending structural scaffold modification at C4 position."
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="font-mono text-xs text-zinc-400 pt-2 border-t border-zinc-800">
+                <span class="text-[#8B5CF6] font-bold">CONCLUSION SO FAR:</span> Dashboards answer known questions quickly. Intelligent conversational layers discover questions the researcher hadn't thought to ask yet.
+              </div>
+            </div>
+
+            <!-- LAB ENTRY 02 -->
+            <div id="lab-entry-02" class="lab-content space-y-6 hidden">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800 pb-3 font-mono text-xs">
+                <span class="text-[#8B5CF6] font-bold">LAB 02 // ARCHITECTURE CONCEPT</span>
+                <span class="text-emerald-400 font-bold">STATUS: PROTOTYPE</span>
+              </div>
+
+              <div>
+                <h3 class="text-editorial-h2 text-white font-bold mb-3">
+                  AI OPERATING SYSTEM (AGENT-CENTRIC INTERFACE)
+                </h3>
+                <p class="font-sans text-base text-zinc-300 leading-relaxed">
+                  What would a personal operating system look like if the interface wasn't built around application windows and folders, but around intelligent agents, continuous goal state, and contextual memory?
+                </p>
+              </div>
+
+              <!-- Interactive Agent Dispatch Simulation -->
+              <div class="p-4 bg-black border border-zinc-800 space-y-3 font-mono text-xs">
+                <div class="flex items-center justify-between border-b border-zinc-800 pb-2">
+                  <span class="text-zinc-400">// AGENT ORCHESTRATION CONSOLE</span>
+                  <button id="lab2-dispatch-btn" class="btn-brutalist btn-brutalist-accent text-[10px] py-1 px-3">
+                    DISPATCH AUTONOMOUS GOAL
+                  </button>
+                </div>
+
+                <div id="lab2-agent-log" class="p-3 bg-zinc-950 border border-zinc-800 min-h-[140px] max-h-[200px] overflow-y-auto space-y-1 text-zinc-400">
+                  <div class="text-zinc-600">// Click 'DISPATCH AUTONOMOUS GOAL' to simulate autonomous agent execution...</div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 text-[10px] text-zinc-500 pt-2">
+                  <div>AGENT PERMISSIONS: READ / ISOLATED</div>
+                  <div>CONTEXT WINDOW: 1M TOKENS</div>
+                  <div>PERSISTENT MEMORY: CHROMA VECTOR</div>
+                </div>
+              </div>
+
+              <div class="font-mono text-xs text-zinc-400 pt-2 border-t border-zinc-800">
+                <span class="text-[#8B5CF6] font-bold">THE THESIS:</span> Future software won't sit idle waiting for clicks. Software will continuously pursue objectives in the background.
+              </div>
+            </div>
+
+            <!-- LAB ENTRY 03 -->
+            <div id="lab-entry-03" class="lab-content space-y-6 hidden">
+              <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-800 pb-3 font-mono text-xs">
+                <span class="text-[#8B5CF6] font-bold">LAB 03 // PERSONAL MANIFESTO</span>
+                <span class="text-yellow-400 font-bold">STATUS: ALWAYS</span>
+              </div>
+
+              <div>
+                <h3 class="text-editorial-h2 text-white font-bold mb-3">
+                  BUILDING THINGS I DON'T KNOW HOW TO BUILD YET.
+                </h3>
+                <p class="font-sans text-base text-zinc-300 leading-relaxed">
+                  Most of the genuinely interesting problems start with not knowing how to solve them. Waiting until you have mastered an entire domain before building in it is the easiest way to never build anything ambitious.
+                </p>
+              </div>
+
+              <div class="p-5 bg-black border border-zinc-800 font-mono text-xs space-y-3 leading-relaxed text-zinc-300">
+                <div class="text-[#8B5CF6] font-bold uppercase">// RULES OF ENGAGEMENT</div>
+                <div>1. When entering an unfamiliar territory, spend 48 hours getting your hands dirty with code before reading 50 textbooks.</div>
+                <div>2. Comfort with being a beginner is a technical superpower.</div>
+                <div>3. The best learning happens when you run a program and it fails with a cryptic error you have to spend 6 hours diagnosing.</div>
+                <div>4. Curiosity is not an aesthetic; it is an active engineering strategy.</div>
+              </div>
+
+              <div class="font-mono text-xs text-zinc-400 pt-2 border-t border-zinc-800">
+                <span class="text-[#8B5CF6] font-bold">CORE MOTTO:</span> "If it doesn't terrify your sense of competence at first, it's probably too safe."
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 — CURRENTLY OBSESSED WITH (Inquiry Dossier)
+         ========================================================================== -->
+    <section id="obsessions" class="border-b border-[#222222] bg-[#090909] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-12" data-aos="fade-up">
+          <div>
+            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+              <span class="text-[#8B5CF6] font-bold">05 //</span>
+              <span>TECHNICAL CURIOSITY INDEX</span>
+            </div>
+            <h2 class="text-editorial-h1 text-white leading-none">
+              CURRENTLY OBSESSED WITH
+            </h2>
+          </div>
+          <p class="font-mono text-xs text-zinc-400 max-w-md italic">
+            "Metadata from my active research inquiries. Hover each subject to reveal the foundational question."
+          </p>
+        </div>
+
+        <!-- 10 Technical Inquiry Cards (Brutalist Grid) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          
+          <!-- 01 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="50">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">01 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">AGENTIC AI</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "What happens when software stops waiting for instructions?"
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="100">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">02 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">COMPUTATIONAL BIOLOGY</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "The point where cellular code meets algorithmic code."
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="150">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">03 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">AUTONOMOUS SYSTEMS</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "How much intelligence can move from screen to machine?"
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="200">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">04 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">GENERATIVE INTERFACES</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "What happens when UI becomes adaptive rather than predetermined?"
+            </p>
+          </div>
+
+          <!-- 05 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="250">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">05 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">INTELLIGENT AUTOMATION</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "Eliminating human latency from repeatable logical pathways."
+            </p>
+          </div>
+
+          <!-- 06 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="300">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">06 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">SCIENTIFIC COMPUTING</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "Turning biological chaos into deterministic models."
+            </p>
+          </div>
+
+          <!-- 07 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="350">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">07 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">HCI AT THE EDGE</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "Moving beyond keyboards, mice, and simple chat windows."
+            </p>
+          </div>
+
+          <!-- 08 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">08 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">EMERGING MACHINES</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "Hardware-software synthesis at the biological frontier."
+            </p>
+          </div>
+
+          <!-- 09 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="450">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">09 / DISCIPLINE</div>
+              <h3 class="font-display font-bold text-base text-white">AI SYSTEMS</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "Orchestrating small, specialized models that collaborate."
+            </p>
+          </div>
+
+          <!-- 10 -->
+          <div class="obsession-item p-5 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all flex flex-col justify-between min-h-[170px]" data-aos="fade-up" data-aos-delay="500">
+            <div>
+              <div class="font-mono text-xs text-zinc-500 mb-2 font-bold">10 / SPECULATIVE</div>
+              <h3 class="font-display font-bold text-base text-white">TECH THAT SHOULDN'T EXIST YET</h3>
+            </div>
+            <p class="obsession-quote font-sans text-xs text-purple-300 italic transition-all duration-300 mt-4 border-t border-zinc-800/80 pt-2">
+              "The experimental tools that feel 5 years ahead of their time."
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Entrepreneurial Thread Anchor -->
+        <div class="mt-12 p-6 bg-[#111111] border border-zinc-800 flex flex-wrap items-center justify-between gap-6" data-aos="fade-up">
+          <div class="max-w-3xl">
+            <div class="font-mono text-xs text-[#8B5CF6] uppercase tracking-wider mb-1 font-semibold">// LONG-TERM DIRECTION: BUILD & COMMERCIALIZE</div>
+            <p class="font-sans text-zinc-300 text-sm leading-relaxed">
+              "Exploring technology not only as something to understand, but something to build with. Long term, I'm interested in turning experiments into products and products into something larger."
+            </p>
+          </div>
+          <div class="font-mono text-xs text-zinc-500 border-l border-zinc-800 pl-4 hidden md:block">
+            <span>STATUS: PRE-INCUBATION</span><br>
+            <span class="text-zinc-400">FOCUS: EXPERIMENTAL PROTOTYPING</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06 — SKILLS / TOOLKIT (Typographic Disciplinary Stacks — ZERO Progress Bars!)
+         ========================================================================== -->
+    <section id="skills" class="border-b border-[#222222] bg-[#0c0c0c] py-20 relative">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-zinc-800 pb-6 mb-12" data-aos="fade-up">
+          <div>
+            <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+              <span class="text-[#8B5CF6] font-bold">06 //</span>
+              <span>TECHNICAL CAPABILITIES & STACKS</span>
+            </div>
+            <h2 class="text-editorial-h1 text-white leading-none">
+              TOOLKIT & DISCIPLINES
+            </h2>
+          </div>
+          
+          <!-- Category Filters -->
+          <div class="flex flex-wrap items-center gap-2 font-mono text-xs">
+            <span class="text-zinc-500 uppercase tracking-wider mr-1 text-[10px]">FILTER:</span>
+            <button class="skill-filter-btn px-3 py-1 bg-purple-600 text-black border border-purple-600 font-bold" data-filter="ALL">ALL</button>
+            <button class="skill-filter-btn px-3 py-1 bg-zinc-900 text-zinc-300 border border-zinc-800 hover:border-[#8B5CF6]" data-filter="ANALYTICS">ANALYTICS</button>
+            <button class="skill-filter-btn px-3 py-1 bg-zinc-900 text-zinc-300 border border-zinc-800 hover:border-[#8B5CF6]" data-filter="COMPUTATION">COMPUTATION</button>
+            <button class="skill-filter-btn px-3 py-1 bg-zinc-900 text-zinc-300 border border-zinc-800 hover:border-[#8B5CF6]" data-filter="AI">AI</button>
+            <button class="skill-filter-btn px-3 py-1 bg-zinc-900 text-zinc-300 border border-zinc-800 hover:border-[#8B5CF6]" data-filter="BIOINFORMATICS">BIOINFORMATICS</button>
+          </div>
+        </div>
+
+        <!-- 4 Disciplines Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- STACK 01: ANALYTICS -->
+          <div class="skill-block p-6 bg-[#111111] border border-zinc-800 transition-all duration-300" data-category="ANALYTICS" data-aos="fade-up" data-aos-delay="50">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+              <span class="font-mono text-xs text-[#8B5CF6] font-bold uppercase">01 // FOUNDATION</span>
+              <span class="font-mono text-[10px] text-zinc-500">2+ YEARS</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-4">ANALYTICS</h3>
+            <p class="font-sans text-xs text-zinc-400 mb-6">
+              Core capability in transforming raw, unstructured records into validated operational models and decision dashboards.
+            </p>
+            <ul class="space-y-2.5 font-mono text-xs text-zinc-300">
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Advanced Excel</span>
+                <span class="text-zinc-600 text-[10px]">VLOOKUP/XLOOKUP</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>SQL</span>
+                <span class="text-zinc-600 text-[10px]">Queries/Joins/CTE</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Power BI</span>
+                <span class="text-zinc-600 text-[10px]">DAX/PowerQuery</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Data Cleaning</span>
+                <span class="text-zinc-600 text-[10px]">Hygiene/Outliers</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Pandas & NumPy</span>
+                <span class="text-zinc-600 text-[10px]">Vectorized Ops</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Data Visualization</span>
+                <span class="text-zinc-600 text-[10px]">Statistical Plots</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Business Reporting</span>
+                <span class="text-zinc-600 text-[10px]">Executive KPIs</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- STACK 02: COMPUTATION -->
+          <div class="skill-block p-6 bg-[#111111] border border-zinc-800 transition-all duration-300" data-category="COMPUTATION" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+              <span class="font-mono text-xs text-[#8B5CF6] font-bold uppercase">02 // INFRASTRUCTURE</span>
+              <span class="font-mono text-[10px] text-zinc-500">APPLIED</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-4">COMPUTATION</h3>
+            <p class="font-sans text-xs text-zinc-400 mb-6">
+              Engineering scripts, automated pipelines, APIs, and reproducible computational workflows.
+            </p>
+            <ul class="space-y-2.5 font-mono text-xs text-zinc-300">
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Python</span>
+                <span class="text-zinc-600 text-[10px]">Core Scripting</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>JavaScript</span>
+                <span class="text-zinc-600 text-[10px]">Vanilla DOM/Async</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>REST APIs</span>
+                <span class="text-zinc-600 text-[10px]">Ingestion/HTTP</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Process Automation</span>
+                <span class="text-zinc-600 text-[10px]">Cron/Pipelines</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Data Processing</span>
+                <span class="text-zinc-600 text-[10px]">ETL Pipelines</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Linux & Shell</span>
+                <span class="text-zinc-600 text-[10px]">CLI/Bash</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Git & GitHub</span>
+                <span class="text-zinc-600 text-[10px]">Version Control</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- STACK 03: AI & AGENTS -->
+          <div class="skill-block p-6 bg-[#111111] border border-zinc-800 transition-all duration-300" data-category="AI" data-aos="fade-up" data-aos-delay="150">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+              <span class="font-mono text-xs text-[#8B5CF6] font-bold uppercase">03 // INTELLIGENCE</span>
+              <span class="font-mono text-[10px] text-purple-400">EXPANDING</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-4">AI & AGENTS</h3>
+            <p class="font-sans text-xs text-zinc-400 mb-6">
+              Deploying large language models, retrieval augmented generation, vector spaces, and autonomous agent loops.
+            </p>
+            <ul class="space-y-2.5 font-mono text-xs text-zinc-300">
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>LLM Orchestration</span>
+                <span class="text-zinc-600 text-[10px]">Prompts/APIs</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>RAG Systems</span>
+                <span class="text-zinc-600 text-[10px]">Vector Retrieval</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Semantic Search</span>
+                <span class="text-zinc-600 text-[10px]">Embeddings</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Knowledge Extraction</span>
+                <span class="text-zinc-600 text-[10px]">Structured Schemas</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>AI Agents</span>
+                <span class="text-zinc-600 text-[10px]">Tool Calling</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Prompt Engineering</span>
+                <span class="text-zinc-600 text-[10px]">Few-Shot/Chain</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>AI Automation</span>
+                <span class="text-zinc-600 text-[10px]">Agentic Workflows</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- STACK 04: BIOINFORMATICS -->
+          <div class="skill-block p-6 bg-[#111111] border border-zinc-800 transition-all duration-300" data-category="BIOINFORMATICS" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center justify-between border-b border-zinc-800 pb-3 mb-4">
+              <span class="font-mono text-xs text-[#8B5CF6] font-bold uppercase">04 // DOMAIN</span>
+              <span class="font-mono text-[10px] text-zinc-500">B.TECH</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-4">BIOINFORMATICS</h3>
+            <p class="font-sans text-xs text-zinc-400 mb-6">
+              Translating biological complexity, DNA/protein sequences, and experimental assays into computational problems.
+            </p>
+            <ul class="space-y-2.5 font-mono text-xs text-zinc-300">
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Computational Biology</span>
+                <span class="text-zinc-600 text-[10px]">Algorithms</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Biological Data</span>
+                <span class="text-zinc-600 text-[10px]">GEO/NCBI/ClinVar</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Genomic Visualization</span>
+                <span class="text-zinc-600 text-[10px]">Loci/Mutations</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Research Workflows</span>
+                <span class="text-zinc-600 text-[10px]">Protocol Review</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Scientific Computing</span>
+                <span class="text-zinc-600 text-[10px]">Statistical Tests</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Sequence Analysis</span>
+                <span class="text-zinc-600 text-[10px]">Alignments/FASTA</span>
+              </li>
+              <li class="flex items-center justify-between py-1 border-b border-zinc-900">
+                <span>Molecular Modeling</span>
+                <span class="text-zinc-600 text-[10px]">Basic PDB parsing</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07 — CONTACT SECTION (Terminal Transmission & Communication Dispatch)
+         ========================================================================== -->
+    <section id="contact" class="border-b border-[#222222] bg-[#090909] py-24 relative overflow-hidden bg-grid-tech">
+      <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+        
+        <!-- Header -->
+        <div class="border-b border-zinc-800 pb-6 mb-16" data-aos="fade-up">
+          <div class="flex items-center gap-3 font-mono text-xs text-zinc-500 uppercase tracking-wider mb-2">
+            <span class="text-[#8B5CF6] font-bold">07 //</span>
+            <span>COMMUNICATION CHANNEL & INQUIRY</span>
+          </div>
+          <h2 class="text-editorial-h1 text-white leading-none">
+            HAVE AN INTERESTING PROBLEM?
+          </h2>
+          <p class="font-sans text-xl md:text-2xl text-zinc-300 mt-4 max-w-2xl font-light">
+            I tend to become disproportionately interested in interesting problems.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Left: Direct Actions & Transmission Links (Cols 1-6) -->
+          <div class="lg:col-span-6 space-y-8" data-aos="fade-right">
+            
+            <!-- Email Transmission Card -->
+            <div class="p-6 bg-[#111111] border border-zinc-800 hover:border-[#8B5CF6] transition-all">
+              <div class="font-mono text-xs text-zinc-500 uppercase mb-2">// DIRECT TRANSMISSION INBOX</div>
+              <a href="mailto:ommulchandani2108@gmail.com" class="font-mono text-lg sm:text-2xl font-bold text-white hover:text-[#A970FF] transition-colors break-all block mb-4">
+                ommulchandani2108@gmail.com
+              </a>
+              <div class="flex flex-wrap items-center gap-3">
+                <a href="mailto:ommulchandani2108@gmail.com" class="btn-brutalist btn-brutalist-accent text-xs py-2 px-4">
+                  OPEN EMAIL CLIENT ↗
+                </a>
+                <button type="button" class="btn-brutalist text-xs py-2 px-4 copy-email-btn">
+                  COPY EMAIL TO CLIPBOARD
+                </button>
+              </div>
+            </div>
+
+            <!-- External Channels -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 font-mono text-xs">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-4 bg-black border border-zinc-800 hover:border-zinc-500 transition-colors flex flex-col justify-between h-24">
+                <span class="text-zinc-500">// NETWORK</span>
+                <span class="font-bold text-white text-sm">LINKEDIN ↗</span>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="p-4 bg-black border border-zinc-800 hover:border-zinc-500 transition-colors flex flex-col justify-between h-24">
+                <span class="text-zinc-500">// REPOSITORIES</span>
+                <span class="font-bold text-white text-sm">GITHUB ↗</span>
+              </a>
+              <a href="resume/resume.pdf" download="Om_Mulchandani_Resume.pdf" class="p-4 bg-purple-950/30 border border-purple-500/50 hover:border-[#8B5CF6] transition-colors flex flex-col justify-between h-24">
+                <span class="text-purple-400">// DOCUMENT</span>
+                <span class="font-bold text-white text-sm">RESUME PDF ↓</span>
+              </a>
+            </div>
+
+            <div class="p-4 bg-zinc-950 border border-zinc-800/80 font-mono text-xs text-zinc-500 space-y-1">
+              <div>BASE: RAJKOT, GUJARAT, INDIA (IST / UTC+5:30)</div>
+              <div>TYPICAL RESPONSE LATENCY: &lt; 24 HOURS</div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Dispatch Form / Terminal Message Transmitter (Cols 7-12) -->
+          <div class="lg:col-span-6 bg-[#111111] border border-zinc-800 p-6 md:p-8" data-aos="fade-left">
+            <div class="border-b border-zinc-800 pb-3 mb-6 font-mono text-xs flex items-center justify-between">
+              <span class="text-zinc-300 font-bold uppercase">// DISPATCH INQUIRY</span>
+              <span class="text-emerald-400 text-[10px]">STATUS: READY</span>
+            </div>
+
+            <form action="mailto:ommulchandani2108@gmail.com" method="post" enctype="text/plain" class="space-y-4 font-mono text-xs">
+              <div>
+                <label for="contact-sender" class="block text-zinc-500 uppercase text-[10px] mb-1">YOUR IDENTITY / EMAIL</label>
+                <input type="text" id="contact-sender" name="sender" required class="w-full bg-black border border-zinc-700 text-zinc-200 p-2.5 focus:outline-none focus:border-[#8B5CF6]" placeholder="name@domain.com">
+              </div>
+
+              <div>
+                <label for="contact-discipline" class="block text-zinc-500 uppercase text-[10px] mb-1">DOMAIN OF INQUIRY</label>
+                <select id="contact-discipline" name="discipline" class="w-full bg-black border border-zinc-700 text-zinc-200 p-2.5 focus:outline-none focus:border-[#8B5CF6]">
+                  <option>Data Analytics / Enterprise Modeling</option>
+                  <option>Bioinformatics & Genomic Computation</option>
+                  <option>AI / RAG / Agent Systems</option>
+                  <option>Unconventional / Cross-disciplinary Problem</option>
+                  <option>Coffee / Research Chat</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-zinc-500 uppercase text-[10px] mb-1">WHAT'S THE PROBLEM?</label>
+                <textarea id="contact-message" name="message" rows="4" required class="w-full bg-black border border-zinc-700 text-zinc-200 p-2.5 focus:outline-none focus:border-[#8B5CF6]" placeholder="Describe the system, dataset, or problem you want to investigate..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-brutalist btn-brutalist-accent w-full text-center py-3">
+                TRANSMIT MESSAGE VIA EMAIL CLIENT
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Massive Editorial Sign-Off Statement -->
+        <div class="mt-20 pt-16 border-t border-zinc-800" data-aos="fade-up">
+          <div class="text-editorial-h1 text-white font-bold leading-tight select-none">
+            LET'S BUILD<br>
+            <span class="text-[#8B5CF6]">SOMETHING WORTH INVESTIGATING.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Minimal Brutalist Editorial)
+       ========================================================================== -->
+  <footer class="bg-[#070707] border-t border-[#1a1a1a] py-12 font-mono text-xs text-zinc-500 select-none">
+    <div class="max-w-[1500px] mx-auto px-4 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between gap-6 pb-8 border-b border-zinc-900">
+        <div>
+          <span class="text-zinc-200 font-bold block mb-1">OM MULCHANDANI</span>
+          <span>INTERDISCIPLINARY TECHNOLOGIST</span>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <a href="#about" class="hover:text-white transition-colors">ABOUT</a>
+          <a href="#trajectory" class="hover:text-white transition-colors">TRAJECTORY</a>
+          <a href="#projects" class="hover:text-white transition-colors">EXPERIMENTS</a>
+          <a href="#lab" class="hover:text-white transition-colors">LAB NOTEBOOK</a>
+          <a href="resume.html" class="text-[#8B5CF6] hover:text-white transition-colors">RESUME</a>
+        </div>
+
+        <div class="text-right">
+          <span class="text-zinc-300 font-semibold block">VERSION 01 // STILL LEARNING</span>
+          <span class="text-[10px]">THE PORTFOLIO IS FINISHED. THE WORK ISN'T.</span>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-wrap items-center justify-between gap-4 text-[10px]">
+        <div>
+          © 2026 OM MULCHANDANI. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center gap-3">
+          <span>DATA</span>
+          <span>×</span>
+          <span>BIOINFORMATICS</span>
+          <span>×</span>
+          <span>AI</span>
+        </div>
+        <div>
+          RAJKOT [22.3039° N, 70.8022° E]
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       COMMAND PALETTE MODAL (CMD + K)
+       ========================================================================== -->
+  <div id="cmd-palette-modal" class="fixed inset-0 z-50 cmd-modal-backdrop hidden items-center justify-center p-4">
+    <div class="bg-[#111111] border border-zinc-700 w-full max-w-xl shadow-2xl overflow-hidden font-mono text-xs">
+      <!-- Search input header -->
+      <div class="p-3 border-b border-zinc-800 flex items-center gap-3 bg-zinc-950">
+        <span class="text-[#8B5CF6] font-bold">›</span>
+        <input id="cmd-palette-input" type="text" class="w-full bg-transparent text-white text-xs focus:outline-none placeholder-zinc-600" placeholder="Type a command or jump to section...">
+        <button id="cmd-palette-close" class="text-zinc-500 hover:text-white px-2 py-0.5 border border-zinc-800 text-[10px]">ESC</button>
+      </div>
+
+      <!-- Action Items List -->
+      <div class="p-2 space-y-1 max-h-80 overflow-y-auto">
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-about">
+          <span>01. JUMP TO: ABOUT & PERSONAL IDENTITY</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-trajectory">
+          <span>02. JUMP TO: EXPERIENCE & LEARNING CURVE</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-projects">
+          <span>03. JUMP TO: SELECTED EXPERIMENTS (GENOME X / ATLAS)</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-lab">
+          <span>04. JUMP TO: LAB NOTEBOOK</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-obsessions">
+          <span>05. JUMP TO: CURRENT OBSESSIONS</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-skills">
+          <span>06. JUMP TO: TOOLKIT & DISCIPLINES</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="jump-contact">
+          <span>07. JUMP TO: CONTACT & INQUIRY</span>
+          <span class="text-zinc-500 text-[10px]">SECTION</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-purple-950/40 hover:bg-purple-900/50 cursor-pointer flex items-center justify-between text-purple-300 hover:text-white transition-colors" data-action="download-pdf">
+          <span>↓ DOWNLOAD RESUME (PDF FILE)</span>
+          <span class="text-purple-400 text-[10px]">DIRECT PDF</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="view-resume">
+          <span>📄 OPEN RESUME (HTML / PRINT)</span>
+          <span class="text-zinc-500 text-[10px]">RESUME.HTML</span>
+        </div>
+        <div class="cmd-item p-2.5 bg-black/40 hover:bg-zinc-800/80 cursor-pointer flex items-center justify-between text-zinc-300 hover:text-white transition-colors" data-action="copy-email">
+          <span>📋 COPY EMAIL ADDRESS</span>
+          <span class="text-zinc-500 text-[10px]">CLIPBOARD</span>
+        </div>
+      </div>
+
+      <div class="p-2 bg-zinc-950 border-t border-zinc-800 text-[10px] text-zinc-500 flex justify-between">
+        <span>PRESS UP/DOWN TO NAVIGATE</span>
+        <span>PRESS ESC TO CLOSE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- AOS (Animate On Scroll) JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Core Main JS Engine -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
