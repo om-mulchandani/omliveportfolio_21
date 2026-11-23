@@ -4,6 +4,9 @@
 > A brutalist, research-terminal personal portfolio built for **Om Mulchandani**.
 
 ---
+#THIS IS A MOCK PORTFOLIO, JUST TO SHOW WHAT I CAN BUILD
+ALL THE WORK EXPERIENCE AND PROJECTS ARE FICTIONS AND ARE EXAMPLES.
+---
 
 ## 01 // IDENTITY & PHILOSOPHY
 
